@@ -23,11 +23,13 @@ Install dependencies:
 
 pip install -r requirements.txt
 Usage:
-Youll need to modify ip_lookup.py to add your API key of abuseIPDB to the code, or directly comment out the API function and use the other one I provided
+You'll need to create a .env file based on the .env-sample to add your API key of abuseIPDB to the code, or directly comment out the API function and use the other one I provided
 
 
 install the script: 
 pip install -e .
+
+
 
 then run it:
 ipnetstatscanner

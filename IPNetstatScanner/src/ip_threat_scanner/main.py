@@ -13,14 +13,17 @@ def cli_main():
             print("Error scanning IP " + str(IP) + ": " + IPInfo["error"] + "\n")
             continue
         
-        print("IP Address: " + str(IPInfo["data"]["ipAddress"]) + "\n")
-        print('Malicious score: ' + str(IPInfo["data"]["abuseConfidenceScore"]) + "\n")
-        print('Country: ' + str(IPInfo["data"]["countryCode"]) + "\n")
-        print('Public IP? = ' + str(IPInfo["data"]["isPublic"]) + "\n")
-        print('Probable use: ' + str(IPInfo["data"]["usageType"]) + "\n")
-        print("\n")
-        print("\n")
-    print('Total connections scanned: ' + str(len(activeConnections)) + "\n")
+        if IPInfo["data"]["abuseConfidenceScore"] > 40:
+            print("\033[1;31m")
+        else:
+            print("\033[0;32m")
+        print("IP Address: " + str(IPInfo["data"]["ipAddress"]))
+        print('Malicious score: ' + str(IPInfo["data"]["abuseConfidenceScore"]))
+        print('Country: ' + str(IPInfo["data"]["countryCode"]))
+        print('Public IP? = ' + str(IPInfo["data"]["isPublic"]))
+        print('Probable use: ' + str(IPInfo["data"]["usageType"]))
+        print("\033[0;0m")
+    print('Total connections scanned: ' + str(len(activeConnections)))
 
 
 # If you want all info available on the connections comment or delete the previous code and use this one instead

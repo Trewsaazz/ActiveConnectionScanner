@@ -1,9 +1,12 @@
 import requests
+import os
+from dotenv import load_dotenv
 from requests.adapters import HTTPAdapter, Retry
 
+load_dotenv()
 
 ##Set the API key for abuseipdb in the variable below
-API_KEY = "YOUR API KEY"
+API_KEY = os.getenv('API_KEY')
 
 ## if you do not want to use the abuse service, you can change it for this one just to obtain the geolocation, you'll need to modify code in the main to use this 
 ## function instead of the abuse one down below. I recommend using the abuse service, 

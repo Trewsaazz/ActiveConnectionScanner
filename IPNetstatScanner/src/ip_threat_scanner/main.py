@@ -13,7 +13,7 @@ def cli_main():
             print("Error scanning IP " + str(IP) + ": " + IPInfo["error"] + "\n")
             continue
         
-        if IPInfo["data"]["abuseConfidenceScore"] > 10:
+        if IPInfo["data"]["abuseConfidenceScore"] > 40:
             print("\033[1;31m")
         else:
             print("\033[0;32m")

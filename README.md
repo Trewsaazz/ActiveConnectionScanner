@@ -17,6 +17,7 @@ This is a python tool to scan active connections in locally and provide some inf
 
 git clone 
 cd IPNetstatScanner
+
 Install dependencies:
 
 
